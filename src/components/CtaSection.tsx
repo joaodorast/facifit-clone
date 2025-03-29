@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const CtaSection = () => {
   return (
     <section className="py-16 bg-facifit-600 relative overflow-hidden">
-      {/* Decorative Circles */}
+   
       <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-facifit-500 opacity-30"></div>
       <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-facifit-500 opacity-20"></div>
       
