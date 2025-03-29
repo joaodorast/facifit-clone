@@ -46,7 +46,7 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { CheckCircle, CalendarDays, Clock, User, CreditCard, AlertCircle } from "lucide-react";
 
-// Definindo o esquema de validação para o formulário
+
 const bookingFormSchema = z.object({
   nome: z.string().min(3, {
     message: "O nome deve ter pelo menos 3 caracteres.",
@@ -61,7 +61,7 @@ const bookingFormSchema = z.object({
     required_error: "Selecione o tipo de consulta.",
   }),
   observacoes: z.string().optional(),
-  // Campos de pagamento
+
   cartao: z.object({
     numero: z.string().regex(/^\d{16}$/, {
       message: "O número do cartão deve conter 16 dígitos.",
@@ -116,7 +116,7 @@ const horariosDisponiveis = [
   "13:00", "14:00", "15:00", "16:00", "17:00"
 ];
 
-// Componente principal da página
+
 const Agendar = () => {
   const { toast } = useToast();
   const navigate = useNavigate();
@@ -128,7 +128,7 @@ const Agendar = () => {
   const [processandoPagamento, setProcessandoPagamento] = useState(false);
   const [pagamentoConfirmado, setPagamentoConfirmado] = useState(false);
   
-  // Configuração do formulário
+
   const form = useForm<BookingFormValues>({
     resolver: zodResolver(bookingFormSchema),
     defaultValues: {
@@ -146,7 +146,7 @@ const Agendar = () => {
     },
   });
   
-  // Função para avançar para a próxima etapa
+
   const avancarEtapa = () => {
     if (etapaAtual === "data") {
       if (!date || !horario) {
@@ -163,7 +163,7 @@ const Agendar = () => {
     }
   };
   
-  // Função para voltar para a etapa anterior
+  
   const voltarEtapa = () => {
     if (etapaAtual === "tipo") {
       setEtapaAtual("data");
@@ -174,7 +174,7 @@ const Agendar = () => {
     }
   };
   
-  // Função para selecionar o tipo de consulta
+
   const selecionarTipo = (id: string) => {
     const tipo = tiposConsulta.find(tipo => tipo.id === id);
     if (tipo) {
@@ -183,21 +183,21 @@ const Agendar = () => {
     }
   };
   
-  // Função para submeter os dados pessoais e avançar para pagamento
+
   const submeterDados = (data: BookingFormValues) => {
     console.log("Dados do formulário:", data);
     setEtapaAtual("pagamento");
   };
   
-  // Função para simular o processamento do pagamento
+
   const processarPagamento = async (data: BookingFormValues) => {
     setProcessandoPagamento(true);
     
     try {
-      // Simulando uma requisição de pagamento
+   
       await new Promise(resolve => setTimeout(resolve, 2000));
       
-      // Validar os dados do cartão (simulação)
+      
       const cartaoValido = validarCartao(data.cartao.numero);
       
       if (!cartaoValido) {
@@ -210,14 +210,14 @@ const Agendar = () => {
         return;
       }
       
-      // Pagamento aprovado
+  
       setPagamentoConfirmado(true);
       toast({
         title: "Pagamento aprovado!",
         description: "Sua consulta foi agendada com sucesso.",
       });
       
-      // Espera um pouco antes de redirecionar
+
       setTimeout(() => {
         navigate("/");
       }, 3000);
@@ -233,12 +233,12 @@ const Agendar = () => {
     }
   };
   
-  // Função simples para validar cartão
+
   const validarCartao = (numero: string) => {
-    // Algoritmo de Luhn (mod 10) - simplificado para exemplo
+   
     if (!numero || !/^\d{16}$/.test(numero)) return false;
     
-    // Validação básica - em produção usaria uma biblioteca de validação de cartões
+ 
     const digitos = numero.split('').map(Number);
     let soma = 0;
     let dobrar = false;
@@ -262,7 +262,7 @@ const Agendar = () => {
       <Navbar />
       
       <main className="flex-1">
-        {/* Hero Section */}
+
         <section className="py-16 bg-facifit-50 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-full w-1/3 bg-facifit-100 clip-path-diagonal"></div>
           
@@ -278,10 +278,10 @@ const Agendar = () => {
           </div>
         </section>
         
-        {/* Processo de Agendamento */}
+
         <section className="py-16 bg-white">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Indicador de progresso */}
+    
             <div className="mb-10">
               <div className="flex justify-between">
                 <div className={`flex flex-col items-center ${etapaAtual === "data" ? "text-facifit-600" : "text-gray-500"}`}>
@@ -330,9 +330,9 @@ const Agendar = () => {
               </div>
             </div>
             
-            {/* Conteúdo das etapas */}
+
             <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
-              {/* Etapa 1: Selecionar Data e Hora */}
+           
               {etapaAtual === "data" && (
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Escolha a Data e Horário</h2>
@@ -346,7 +346,7 @@ const Agendar = () => {
                           selected={date}
                           onSelect={setDate}
                           disabled={(date) => {
-                            // Desabilita datas anteriores a hoje e fins de semana
+                          
                             const day = date.getDay();
                             return (
                               date < new Date(new Date().setHours(0, 0, 0, 0)) ||
@@ -395,7 +395,7 @@ const Agendar = () => {
                 </div>
               )}
               
-              {/* Etapa 2: Selecionar Tipo de Consulta */}
+             
               {etapaAtual === "tipo" && (
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Escolha o Tipo de Consulta</h2>
@@ -478,7 +478,7 @@ const Agendar = () => {
                 </div>
               )}
               
-              {/* Etapa 3: Preencher Dados Pessoais */}
+           
               {etapaAtual === "dados" && (
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Seus Dados</h2>
@@ -589,7 +589,7 @@ const Agendar = () => {
                 </div>
               )}
               
-              {/* Etapa 4: Pagamento */}
+             
               {etapaAtual === "pagamento" && (
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Pagamento</h2>
