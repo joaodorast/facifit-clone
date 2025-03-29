@@ -12,7 +12,7 @@ const Nutricao = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* Hero Section */}
+    
         <section className="py-16 md:py-24 bg-gradient-to-br from-facifit-600 to-facifit-700 text-white relative overflow-hidden">
           <div className="absolute top-0 right-0 w-1/3 h-full bg-facifit-500 opacity-20 clip-path-polygon"></div>
           <div className="absolute bottom-0 left-0 w-1/4 h-1/2 bg-facifit-500 opacity-10 rounded-tr-full"></div>
@@ -74,7 +74,7 @@ const Nutricao = () => {
           </div>
         </section>
 
-        {/* Abordagem Nutricional */}
+     
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -200,7 +200,7 @@ const Nutricao = () => {
           </div>
         </section>
 
-        {/* Programas Nutricionais */}
+       
         <section className="py-16 bg-facifit-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -508,7 +508,7 @@ const Nutricao = () => {
           </div>
         </section>
 
-        {/* Perguntas Frequentes */}
+   
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -602,7 +602,7 @@ const Nutricao = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+       
         <section className="py-16 bg-facifit-600 relative overflow-hidden">
           <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-facifit-500 opacity-30"></div>
           <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-facifit-500 opacity-20"></div>

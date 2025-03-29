@@ -58,7 +58,7 @@ const Instrutores = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* Hero Section */}
+       
         <section className="bg-gradient-to-br from-facifit-50 to-white py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center max-w-3xl mx-auto">
@@ -81,7 +81,7 @@ const Instrutores = () => {
           </div>
         </section>
 
-        {/* Stats Section */}
+      
         <section className="py-16 bg-facifit-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
@@ -105,7 +105,7 @@ const Instrutores = () => {
           </div>
         </section>
 
-        {/* Instrutores Detalhados */}
+       
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -187,7 +187,7 @@ const Instrutores = () => {
           </div>
         </section>
 
-        {/* Metodologia de Trabalho */}
+       
         <section className="py-16 bg-facifit-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -361,7 +361,7 @@ const Instrutores = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+       
         <section className="py-16 bg-facifit-600 relative overflow-hidden">
           <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-facifit-500 opacity-30"></div>
           <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-facifit-500 opacity-20"></div>

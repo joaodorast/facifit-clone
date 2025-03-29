@@ -46,7 +46,7 @@ const Contato = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulando envio para API
+  
     setTimeout(() => {
       console.log("Dados do formulário:", formData);
       
@@ -56,7 +56,7 @@ const Contato = () => {
         variant: "default",
       });
       
-      // Resetar formulário
+     
       setFormData({
         nome: "",
         email: "",
@@ -75,7 +75,7 @@ const Contato = () => {
     <div className="min-h-screen flex flex-col">
       <Navbar />
       <main className="flex-1">
-        {/* Hero Section */}
+       
         <section className="py-16 bg-facifit-50 relative overflow-hidden">
           <div className="absolute top-0 right-0 h-full w-1/3 bg-facifit-100 clip-path-diagonal"></div>
           <div className="absolute bottom-0 left-0 h-12 w-full bg-gradient-to-r from-facifit-100 to-white"></div>
@@ -107,11 +107,11 @@ const Contato = () => {
           </div>
         </section>
 
-        {/* Formulário e Informações */}
+       
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {/* Formulário de Contato */}
+             
               <div className="bg-white rounded-lg shadow-lg p-8 border border-gray-100">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Envie-nos uma mensagem</h2>
                 
@@ -227,7 +227,7 @@ const Contato = () => {
                 </form>
               </div>
               
-              {/* Informações de Contato e Mapa */}
+             
               <div>
                 <div className="bg-facifit-50 rounded-lg p-8 mb-8">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Informações de Contato</h2>
@@ -285,7 +285,7 @@ const Contato = () => {
           </div>
         </section>
 
-        {/* Canais de Atendimento */}
+
         <section className="py-16 bg-facifit-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -339,7 +339,7 @@ const Contato = () => {
           </div>
         </section>
 
-        {/* FAQ Rápido */}
+      
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -393,7 +393,7 @@ const Contato = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
+        
         <section className="py-16 bg-facifit-600 relative overflow-hidden">
           <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-facifit-500 opacity-30"></div>
           <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-facifit-500 opacity-20"></div>

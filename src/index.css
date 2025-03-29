@@ -108,7 +108,7 @@
   background-position: 0 0, 30px 30px;
 }
 
-/* Formas especiais para as páginas */
+
 .clip-path-diagonal {
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
 }
@@ -117,7 +117,7 @@
   clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 60% 100%);
 }
 
-/* Animações para elementos */
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -136,7 +136,7 @@
   animation: slideInRight 0.5s ease-out forwards;
 }
 
-/* Efeitos para cards */
+
 .card-hover-effect {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
